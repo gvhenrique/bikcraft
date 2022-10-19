@@ -1,0 +1,42 @@
+.l-header--background {
+  background-color: $cor-12;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu {
+  display: flex;
+  gap: 40px;
+
+  a {
+    @include font-1-m-b;
+    font-weight: 500;
+    color: $cor-0;
+    padding: 16px 0px;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 2px;
+      background-color: currentColor;
+      transition: 0.3s;
+      position: absolute;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+// Menu Mobile
+
+.menu--mobile {
+  display: none;
+}
