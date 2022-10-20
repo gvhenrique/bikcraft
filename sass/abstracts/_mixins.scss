@@ -1,31 +1,45 @@
+// MediaQueries mixin
+
+@mixin for-size($size) {
+  @if $size == phone {
+    @media screen and (max-width: 500px) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media screen and (max-width: 800px) {
+      @content;
+    }
+  }
+}
+
 // Typography mixins
 
 @mixin font-1-xxl {
   font-weight: 600;
   font-size: rem(64);
   line-height: 1.12;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: $font-f-1, sans-serif;
 }
 
 @mixin font-1-xl {
   font-weight: 600;
   font-size: rem(32);
   line-height: 1.25;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: $font-f-1, sans-serif;
 }
 
 @mixin font-1-l {
   font-weight: 400;
   font-size: rem(24);
   line-height: 1.5;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: $font-f-1, sans-serif;
 }
 
 @mixin font-2-l {
   font-weight: 400;
   font-size: rem(24);
   line-height: 1.5;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: $font-f-2, sans-serif;
 }
 
 @mixin font-2-l-b {
@@ -34,54 +48,54 @@
   text-transform: uppercase;
   line-height: 1.5;
   letter-spacing: 0.015em;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: $font-f-2, sans-serif;
 }
 
 @mixin font-1-m {
   font-weight: 400;
   font-size: rem(18);
   line-height: 1.33;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: $font-f-1, sans-serif;
 }
 
 @mixin font-1-m-b {
   font-weight: 600;
   font-size: rem(18);
   line-height: 1.33;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: $font-f-1, sans-serif;
 }
 
 @mixin font-2-m {
   font-weight: 500;
   font-size: rem(18);
   line-height: 1.33;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: $font-f-2, sans-serif;
 }
 
 @mixin font-1-s {
   font-weight: 400;
   font-size: rem(16);
   line-height: 1.5;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: $font-f-1, sans-serif;
 }
 
 @mixin font-2-s {
   font-weight: 400;
   font-size: rem(16);
   line-height: 1.5;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: $font-f-2, sans-serif;
 }
 
 @mixin font-2-xs {
   font-weight: 400;
   font-size: rem(14);
   line-height: 1.43;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: $font-f-2, sans-serif;
 }
 
 @mixin font-1-xs {
   font-weight: 600;
   font-size: rem(12);
   line-height: 1.33;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: $font-f-1, sans-serif;
 }
