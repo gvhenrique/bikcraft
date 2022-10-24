@@ -1,0 +1,6 @@
+// Px to rem function
+
+@function rem($target, $context: 16) {
+  @return ($target / $context) * 1rem
+}
+
