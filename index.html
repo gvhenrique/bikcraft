@@ -20,8 +20,11 @@
 <body>
   <header class="l-header--background">
     <div class="header container">
-      <a href="./"> <img src="./img/bikcraft.svg" alt="Logo bikcraft" width="136" height="32"> </a>
+      <a href="#"> <img src="./img/bikcraft.svg" alt="Logo bikcraft" width="136" height="32"> </a>
       <nav>
+        <button aria-expanded="false" class="header__menu--mobile">
+          <span></span>
+        </button>
         <ul class="header__menu">
           <li>
             <a href="./bicicletas.html">Bicicletas</a>
@@ -34,9 +37,6 @@
           </li>
         </ul>
       </nav>
-      <button class="header__menu--mobile">
-        <span></span>
-      </button>
     </div>
   </header>
   <script type="module" src="./js/script.js"></script>

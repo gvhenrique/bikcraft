@@ -12,12 +12,48 @@
   display: flex;
   gap: 40px;
 
+  @include for-size(tablet) {
+    display: block;
+    height: 0px;
+    background-color: $cor-12;
+    width: 100%;
+    top: 64px;
+    left: 0;
+    z-index: 2;
+    position: absolute;
+    transition: .6s;
+    overflow: hidden;
+
+    &.active {
+      height: 195px; 
+    }
+  }
+  @include for-size(phone) {
+    &.active {
+      height: 130px; 
+    }
+  }
+  
+  li {
+    @include for-size(tablet) {
+      border-bottom: 2px solid $cor-11;
+      margin: 0px 20px;
+    }
+  }
+
   a {
     @include font-1-m-b;
     font-weight: 500;
     color: $cor-0;
+    width: max-content;
     padding: 16px 0px;
     position: relative;
+    margin: 0 auto;
+
+    @include for-size(phone) {
+      padding: 8px 12px;
+      font-size: rem(14);
+    }
 
     &::after {
       content: '';
@@ -31,12 +67,44 @@
 
     &:hover::after {
       width: 100%;
+      @include for-size(tablet) {
+        width: 0%;
+      }
     }
+    
   }
 }
 
 // Menu Mobile
-
 .header__menu--mobile {
+  cursor: pointer;
+  background-color: transparent;
   display: none;
+
+  @include for-size(tablet) {
+    border: none;
+    display: block;
+  }
+
+  span {
+    display: block;
+    border-top: 3px solid $cor-0;
+    &::before {
+      content: '';
+      height: 3px;
+      width: 25px;
+      background-color: $cor-0;
+      display: block;
+      margin-top: 4px;
+    }
+
+    &::after {
+      content: '';
+      height: 3px;
+      width: 25px;
+      background-color: $cor-0;
+      margin-top: 4px;
+      display: block;
+    }
+  }
 }
