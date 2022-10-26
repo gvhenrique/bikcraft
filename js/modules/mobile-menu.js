@@ -1,6 +1,6 @@
 import OutsideClick from './helper/outside-click';
 
-export default class MenuMobile {
+export default class MobileMenu {
   constructor(menu, menuButton) {
     this.menu = document.querySelector(menu);
     this.menuButton = document.querySelector(menuButton);
@@ -9,10 +9,10 @@ export default class MenuMobile {
   }
 
   toggleAriaAttribute() {
-    if (this.menuButton.attributes[0].value === 'false') {
-      this.menuButton.setAttribute('aria-expanded', 'true');
-    } else {
+    if (this.menuButton.getAttribute('aria-expanded') === 'true') {
       this.menuButton.setAttribute('aria-expanded', 'false');
+    } else {
+      this.menuButton.setAttribute('aria-expanded', 'true');
     }
   }
 
@@ -28,7 +28,7 @@ export default class MenuMobile {
     event.preventDefault();
     this.toggleAriaAttribute();
     this.toggleActiveClass();
-    const outsideClick = new OutsideClick('.header__menu', '.header__menu--mobile span');
+    const outsideClick = new OutsideClick('.header', '.header__menu');
     outsideClick.init();
   }
 

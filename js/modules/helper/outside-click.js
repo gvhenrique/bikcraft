@@ -1,15 +1,15 @@
 export default class OutsideClick {
-  constructor(target, targetButton) {
+  constructor(element, activeElement) {
+    this.element = document.querySelector(element);
+    this.stateElement = document.querySelector(activeElement);
     this.html = document.querySelector('html');
-    this.target = document.querySelector(target);
-    this.targetButton = document.querySelector(targetButton);
     this.userEvents = ['click', 'touch'];
     this.checkClick = this.checkClick.bind(this);
   }
 
   checkClick(event) {
-    if ((event.target !== this.targetButton) && (!this.target.contains(event.target))) {
-      this.target.classList.remove('active');
+    if (!this.element.contains(event.target)) {
+      this.stateElement.classList.remove('active');
       this.userEvents.forEach((userEvent) => {
         this.html.removeEventListener(userEvent, this.checkClick);
       });
@@ -17,12 +17,15 @@ export default class OutsideClick {
   }
 
   addHtmlEvent() {
-    this.userEvents.forEach((userEvent) => this.html.addEventListener(userEvent, this.checkClick));
+    this.userEvents.forEach((userEvent) => {
+      this.html.addEventListener(userEvent, this.checkClick);
+    });
   }
 
   init() {
-    if (this.target) {
+    if (this.element && this.stateElement) {
       this.addHtmlEvent();
     }
+    return this;
   }
 }
