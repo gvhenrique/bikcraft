@@ -29,6 +29,7 @@
     }
   }
   @include for-size(phone) {
+    top: 72px;
     &.active {
       height: 130px; 
     }
