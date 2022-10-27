@@ -48,3 +48,10 @@ svg {
 	max-width: 100%;
 	display: block;
 }
+
+/* radius for all images */
+
+img[src$=".jpg"] {
+	border-radius: 5px;
+}
+

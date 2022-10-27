@@ -9,12 +9,17 @@
     @media screen and (max-width: 800px) {
       @content;
     }
+  } @else if $size == desktop {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
   }
 }
 
 // Typography mixins
 
-@mixin font-1-xxl {
+@mixin font-1-xxl($color: $cor-12) {
+  color: $color;
   font-weight: 600;
   font-size: rem(64);
   line-height: 1.12;
@@ -35,7 +40,8 @@
   font-family: $font-f-1, sans-serif;
 }
 
-@mixin font-2-l {
+@mixin font-2-l($color: $cor-12) {
+  color: $color;
   font-weight: 400;
   font-size: rem(24);
   line-height: 1.5;
@@ -58,7 +64,8 @@
   font-family: $font-f-1, sans-serif;
 }
 
-@mixin font-1-m-b {
+@mixin font-1-m-b($color: $cor-12) {
+  color: $color;
   font-weight: 600;
   font-size: rem(18);
   line-height: 1.33;
