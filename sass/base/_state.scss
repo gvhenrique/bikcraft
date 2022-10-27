@@ -1,0 +1,11 @@
+// Animation js
+
+.js [data-animate] {
+  opacity: 0;
+}
+
+.js .animate {
+  opacity: 1;
+  transform: none;
+  transition: transform 0.8s, opacity 0.8s;
+}
