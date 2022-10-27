@@ -1,44 +1,54 @@
 .l-header-background {
-  background-color: $cor-12;
+  background: $cor-12;
 }
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .header__menu {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
-
   @include for-size(tablet) {
-    display: block;
-    height: 0px;
-    background-color: $cor-12;
-    width: 100%;
-    top: 64px;
-    left: 0;
-    z-index: 2;
-    position: absolute;
-    transition: .6s;
-    overflow: hidden;
-    border-radius: 0px 0px 20px 20px;
+    gap: 20px;
 
-    &.active {
-      height: 195px; 
-      box-shadow: inset 0px -1px 0px $cor-0;
+    .js & {
+      display: block;
+      height: 0px;
+      background: $cor-12;
+      width: 100%;
+      top: 72px;
+      left: 0;
+      z-index: 2;
+      position: absolute;
+      transition: 0.6s;
+      overflow: hidden;
+      border-radius: 0px 0px 20px 20px;
+  
+      &.active {
+        height: 195px;
+        box-shadow: inset 0px -1px 0px $cor-0;
+      }
     }
   }
-  
+
   @include for-size(phone) {
-    top: 72px;
-    &.active {
-      height: 130px; 
+    gap: 12px;
+    .js & {
+      top: 72px;
+      &.active {
+        height: 130px;
+      }
     }
   }
   
-  li {
+
+  .js & li {
     @include for-size(tablet) {
       border-bottom: 2px solid $cor-11;
       margin: 0px 20px;
@@ -54,40 +64,52 @@
     position: relative;
     margin: 0 auto;
 
-    @include for-size(phone) {
-      padding: 8px 12px;
-      font-size: rem(14);
-    }
-
     &::after {
       content: '';
       display: block;
       width: 0%;
       height: 2px;
-      background-color: currentColor;
+      background: currentColor;
       transition: 0.3s;
       position: absolute;
     }
 
     &:hover::after {
       width: 100%;
-      @include for-size(tablet) {
+    }
+
+    @include for-size(tablet) {
+      background: $cor-11;
+      &:hover::after {
         width: 0%;
       }
+      .js & {
+        padding: 16px 8px;
+        background: transparent;
+      }
+      padding: 8px 12px;
     }
-    
+
+    @include for-size(phone) {
+      .js & {
+        padding: 8px 12px;
+      }
+      font-size: rem(14);
+    }
   }
 }
 
 // Menu Mobile
 .header__menu--mobile {
   cursor: pointer;
-  background-color: transparent;
+  background: transparent;
   display: none;
+  border: none;
 
   @include for-size(tablet) {
-    border: none;
-    display: block;
+    .js & {
+      display: block;
+    }
   }
 
   span {
@@ -98,7 +120,7 @@
       content: '';
       height: 3px;
       width: 25px;
-      background-color: $cor-0;
+      background: $cor-0;
       display: block;
       margin-top: 4px;
     }
@@ -107,7 +129,7 @@
       content: '';
       height: 3px;
       width: 25px;
-      background-color: $cor-0;
+      background: $cor-0;
       margin-top: 4px;
       display: block;
     }

@@ -1,9 +1,11 @@
 @charset 'utf-8';
 
-@import 'abstracts/index';
+@import './abstracts/index';
 
-@import 'base/index';
+@import './base/index';
 
-@import 'layout/index';
+@import './layout/index';
 
-@import 'components/index';
+@import './components/index';
+
+@import './pages/index';
