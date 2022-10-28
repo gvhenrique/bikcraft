@@ -1,3 +1,10 @@
+// Container mixin
+@mixin container($size) {
+  max-width: ($size)+px;
+  margin: auto;
+  padding: 0px 20px;
+}
+
 // MediaQueries mixin
 
 @mixin for-size($size) {
@@ -26,11 +33,15 @@
   font-family: $font-f-1, sans-serif;
 }
 
-@mixin font-1-xl {
+@mixin font-1-xl($color: $cor-12) {
+  color: $color;
   font-weight: 600;
   font-size: rem(32);
   line-height: 1.25;
   font-family: $font-f-1, sans-serif;
+  @include for-size(tablet) {
+    font-size: 1.5rem;
+  }
 }
 
 @mixin font-1-l {
@@ -72,7 +83,8 @@
   font-family: $font-f-1, sans-serif;
 }
 
-@mixin font-2-m {
+@mixin font-2-m($color: $cor-12) {
+  color: $color;
   font-weight: 500;
   font-size: rem(18);
   line-height: 1.33;

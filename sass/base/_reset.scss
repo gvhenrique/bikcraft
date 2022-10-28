@@ -18,10 +18,7 @@ ol {
 	list-style: none;
 }
 
-/* Set core root defaults */
-html:focus-within {
-	scroll-behavior: smooth;
-}
+// Height 100%
 
 html,
 body {
@@ -30,7 +27,6 @@ body {
 
 /* Set core body defaults */
 body {
-	text-rendering: optimizeSpeed;
 	line-height: 1.5;
 }
 

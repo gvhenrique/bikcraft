@@ -1,0 +1,24 @@
+.s-escolha-a-sua {
+  padding-bottom: 120px;
+  @include for-size(tablet) {
+    padding-bottom: 60px;
+  }
+  .l-container--large {
+    padding: 0px;
+  }
+  .title {
+    color: $cor-12;
+    margin-bottom: 40px;
+    text-transform: lowercase;
+  }
+}
+
+.escolha-a-sua__list {
+  display: flex;
+  gap: 40px;
+  padding: 0px 20px 20px 20px;
+  overflow-x: auto;
+  @include for-size(tablet) {
+    gap: 20px;
+  }
+}
