@@ -1,0 +1,55 @@
+.s-parceiros {
+  padding-bottom: 120px;
+  @include for-size(tablet) {
+    padding-bottom: 60px;
+  }
+  .title {
+    color: $cor-11;
+    margin: 60px auto;
+    @include for-size(phone) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.parceiros__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include for-size(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  li {
+    display: flex;
+    padding: 32px;
+    border-right: 2px solid $cor-2;
+    @include for-size(tablet) {
+      border-right: none;
+      border-bottom: 2px solid $cor-2;
+      
+      &:nth-child(1n+7) {
+        border-bottom: none;
+      }
+      &:nth-child(odd) {
+        border-right: 2px solid $cor-2;
+      }
+    }
+
+    img {
+      margin: auto;
+    }
+
+    // Border decoration
+
+    &:nth-child(4n+4) {
+      border-right:none;
+    }
+  
+    &:nth-child(1n+5) {
+      border-top: 2px solid $cor-2;
+      @include for-size(tablet) {
+        border-top: none;
+      }
+    }
+  }
+
+}
