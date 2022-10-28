@@ -1,0 +1,64 @@
+.p-tecnologia-background {
+  background: $cor-11;
+  box-shadow: inset 0px -80px 0px $cor-0, inset 0px 80px 0px $cor-0;
+  @include for-size(tablet) {
+    box-shadow: none;
+  }
+}
+
+.tecnologia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  @include for-size(tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tecnologia__content {
+  padding: 160px 0px;
+  @include for-size(tablet) {
+    margin-top: 60px;
+    padding: 0px;
+  }
+  .subtitle {
+    margin-bottom: 20px;
+  }
+  .title {
+    margin-bottom: 32px;
+    text-transform: lowercase;
+  }
+  .paragraph {
+    margin-bottom: 20px;
+  }
+  
+  .secondary-button {
+    margin-bottom: 84px;
+    @include for-size(tablet) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.tecnologia__advantage__list {
+  display: flex;
+  gap: 40px;
+  @include for-size(phone) {
+    flex-direction: column;
+  }
+}
+
+.tecnologia__img {
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include for-size(tablet) {
+      display: none;
+    }
+  }
+}
+
+
