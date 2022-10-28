@@ -44,7 +44,8 @@
   }
 }
 
-@mixin font-1-l {
+@mixin font-1-l($color: $cor-12) {
+  color: $color;
   font-weight: 400;
   font-size: rem(24);
   line-height: 1.5;
@@ -66,12 +67,16 @@
   line-height: 1.5;
   letter-spacing: 0.015em;
   font-family: $font-f-2, sans-serif;
+  @include for-size(desktop) {
+    font-size: 1.125rem;
+  }
 }
 
-@mixin font-1-m {
+@mixin font-1-m($color: $cor-12) {
+  color: $color;
   font-weight: 400;
   font-size: rem(18);
-  line-height: 1.33;
+  line-height: 1.35;
   font-family: $font-f-1, sans-serif;
 }
 
@@ -98,7 +103,8 @@
   font-family: $font-f-1, sans-serif;
 }
 
-@mixin font-2-s {
+@mixin font-2-s($color: $cor-12) {
+  color: $color;
   font-weight: 400;
   font-size: rem(16);
   line-height: 1.5;

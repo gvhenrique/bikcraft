@@ -1,0 +1,18 @@
+.advantage-card {
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px
+  }
+
+  &__title {
+    @include font-1-m($cor-0);
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  &__paragraph {
+    @include font-2-s($cor-5);
+  }
+}

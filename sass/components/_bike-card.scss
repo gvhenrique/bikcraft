@@ -10,6 +10,7 @@
   &__title {
     display: flex;
     align-items: center;
+    text-transform: capitalize;
     margin-bottom: 8px;
     @include font-1-xl($cor-11);
     
