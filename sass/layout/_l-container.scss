@@ -1,11 +1,14 @@
 .l-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0px 20px;
+  @include container(1200);
+
   &.header {
     padding: 16px 20px;
     @include for-size(tablet) {
       padding: 20px 20px;
     }
   }
+}
+
+.l-container--large {
+  @include container(1400);
 }
