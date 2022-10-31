@@ -1,10 +1,12 @@
 .p-statement {
-  background: $cor-p1;
+  background: $cor-p1 url('../../../img/dec/bottom-right-p.svg') no-repeat right 40px bottom 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: flex-end;
+  overflow: hidden;
   @include for-size(tablet) {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 }
 
@@ -29,6 +31,7 @@
 
 .statement__content {
   padding: 40px 40px 80px 80px;
+
   @include for-size (tablet) {
     padding: 40px 20px;
   }
@@ -42,8 +45,9 @@
     line-height: 1.35;
     color: $cor-p5;
     margin-bottom: 32px;
-    max-width: 32ch;
-    
+    max-width: 24ch;
+    position: relative;
+
     @include for-size(desktop) {
       font-size: rem(28);
     }
@@ -53,7 +57,26 @@
     }
 
     @include for-size(phone) {
-      font-size: rem(24);
+      font-size: rem(20);
+    }
+
+    &::before {
+      content: '“';
+      font-size: 5rem;
+      top: -20px;
+      left: -50px;
+      color: $cor-p2;
+      position: absolute;
+      @include for-size(tablet) {
+        left: -35px;
+      }
+    }
+
+    &::after {
+      content: '”';
+      font-size: 5rem;
+      color: $cor-p2;
+      position: absolute;
     }
   }
 
