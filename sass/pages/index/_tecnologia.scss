@@ -22,18 +22,18 @@
   @include for-size(tablet) {
     padding: 60px 0px;
   }
-  .subtitle {
+  .c-subtitle {
     margin-bottom: 20px;
   }
-  .title {
+  .c-title {
     margin-bottom: 32px;
     text-transform: lowercase;
   }
-  .paragraph {
+  .c-paragraph {
     margin-bottom: 20px;
   }
   
-  .secondary-button {
+  .c-secondary-button {
     margin-bottom: 84px;
     @include for-size(tablet) {
       margin-bottom: 60px;

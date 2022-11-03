@@ -1,4 +1,4 @@
-.title {
+.c-title {
   @include font-1-xxl($cor-0);
   @include for-size(desktop) {
     font-size: rem(48);
