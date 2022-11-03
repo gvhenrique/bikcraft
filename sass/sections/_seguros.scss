@@ -1,0 +1,20 @@
+.s-seguros-background {
+  background: $cor-11;
+  padding: 60px 0px;
+}
+
+.seguros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+
+  @include for-size(tablet) {
+    grid-template-columns: 1fr;
+  }
+
+  .c-title {
+    grid-column: 1/-1;
+    text-transform: lowercase;
+  }
+}

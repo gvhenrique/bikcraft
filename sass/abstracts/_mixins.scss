@@ -118,7 +118,8 @@
   font-family: $font-f-2, sans-serif;
 }
 
-@mixin font-1-xs {
+@mixin font-1-xs($color: $cor-12) {
+  color: $color;
   font-weight: 600;
   font-size: rem(12);
   line-height: 1.33;

@@ -1,4 +1,4 @@
-.paragraph {
+.c-paragraph {
   @include font-2-l($cor-5);
   @include for-size(desktop) {
     font-size: rem(18);

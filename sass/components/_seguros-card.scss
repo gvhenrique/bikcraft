@@ -1,0 +1,77 @@
+.c-seguros__card {
+  background: $cor-12;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 32px 32px 32px 64px;
+  border-radius: 5px;
+  
+  h3 {
+    @include font-1-xl($cor-6);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  span {
+    @include font-1-xl($cor-0);
+    text-transform: uppercase;
+    &::after {
+      content: 'mensal';
+      @include font-1-xs($cor-6);
+      display: block;
+      text-transform: lowercase;
+      text-align: right;
+    }
+  }
+
+  ul {
+    grid-column: 1/-1;
+  }
+
+  .c-button {
+    grid-column: 1/-1;
+    max-width: max-content;
+  }
+
+  &:nth-of-type(1) {
+    .c-button {
+      background: $cor-10;
+      a {
+        color: $cor-0;
+      }
+      &:hover {
+        background: $cor-9;
+      }
+    }
+  }
+
+  &:nth-of-type(2) {
+    h3 { 
+      color: $cor-p1;
+    }
+  }
+}
+
+.seguros__card__list {
+  @include font-2-m($cor-0);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::before {
+      content: '';
+      background: url(../../img/icones/lista.svg) no-repeat center;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: -25px;
+      display: inline-block;
+    }
+
+    &:last-child {
+      margin-bottom: 32px;
+    }
+  }
+}
