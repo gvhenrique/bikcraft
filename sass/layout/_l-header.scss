@@ -40,9 +40,8 @@
   @include for-size(phone) {
     gap: 12px;
     .js & {
-      top: 72px;
       &.active {
-        height: 130px;
+        height: 190px;
       }
     }
   }
@@ -92,9 +91,8 @@
 
     @include for-size(phone) {
       .js & {
-        padding: 8px 12px;
+        font-size: rem(16);
       }
-      font-size: rem(14);
     }
   }
 }
